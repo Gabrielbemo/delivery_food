@@ -8,14 +8,13 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255,233,255,252),
+      backgroundColor: Color.fromARGB(255, 233, 255, 252),
       body: Column(
         children: [
           Image(
             image: NetworkImage(
                 'https://cdn.discordapp.com/attachments/956310286866972794/956722285975306260/Blue_Restaurant_Logo__1_-removebg-preview.png'),
           ),
-
           Padding(
             padding: EdgeInsets.symmetric(vertical: 12, horizontal: 25),
             child: const TextField(
@@ -27,7 +26,6 @@ class Login extends StatelessWidget {
               ),
             ),
           ),
-          
           Padding(
             padding: EdgeInsets.symmetric(vertical: 12, horizontal: 25),
             child: const TextField(
@@ -39,21 +37,17 @@ class Login extends StatelessWidget {
               ),
             ),
           ),
-
+          Container(
+            margin: EdgeInsets.all(10.0),
+          ),
           ClipRRect(
-            borderRadius: BorderRadius.circular(4),
+            borderRadius: BorderRadius.circular(12),
             child: Stack(
               children: <Widget>[
                 Positioned.fill(
                   child: Container(
                     decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: <Color>[
-                          Color(0xFF0D47A1),
-                          Color(0xFF1976D2),
-                          Color(0xFF42A5F5),
-                        ],
-                      ),
+                      color: Color.fromRGBO(24, 54, 105, 1)
                     ),
                   ),
                 ),
@@ -61,11 +55,41 @@ class Login extends StatelessWidget {
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.all(16.0),
                     primary: Colors.white,
+                    minimumSize: Size(232, 56),
                     textStyle: const TextStyle(fontSize: 20),
                   ),
                   onPressed: () {},
                   child: const Text('Login'),
                 ),
+                
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(10.0),
+          ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Stack(
+              children: <Widget>[
+                Positioned.fill(
+                  child: Container(
+                    decoration: const BoxDecoration(
+                        color: Color.fromRGBO(24, 54, 105, 1)
+                    ),
+                  ),
+                ),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    padding: const EdgeInsets.all(16.0),
+                    primary: Colors.white,
+                    minimumSize: Size(232, 56),
+                    textStyle: const TextStyle(fontSize: 20),
+                  ),
+                  onPressed: () {},
+                  child: const Text('Cadastrar'),
+                ),
+                
               ],
             ),
           ),

@@ -1,16 +1,12 @@
-# delivery_food
+# Delivery Food
 
-A new Flutter project.
+# Integrantes
+Lucas Belinelli Pereira
+Gabriel Bernardes de Moura
+Arthur Silva Aguiar
 
-## Getting Started
+# Objetivo do app: 
 
-This project is a starting point for a Flutter application.
+Devido a pandêmia e as taxas abusivas dos aplicativos, pensamos em criar um aplicativo que seria muito mais em conta para cidades do interior, cujo supriria a necessidade tanto de restaurantes pequenos quanto maiores, e também facilitaria a compra de lanches, bebidas, etc.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Instruções para execução do aplicativo
