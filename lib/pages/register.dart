@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 //import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class Register extends StatelessWidget {
+  const Register({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +11,11 @@ class Login extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 233, 255, 252),
       body: Column(
         children: [
-          Image(
-            image: NetworkImage(
-                'https://cdn.discordapp.com/attachments/956310286866972794/956722285975306260/Blue_Restaurant_Logo__1_-removebg-preview.png'),
-          ),
+          Padding(padding: EdgeInsets.symmetric(vertical: 70,horizontal:2)),
+          Text(
+            'Seja Bem-Vindo!!'
+            'Informe seus dados pessoais.'
+          ),       
           Padding(
             padding: EdgeInsets.symmetric(vertical: 12, horizontal: 25),
             child: const TextField(
@@ -22,7 +23,7 @@ class Login extends StatelessWidget {
                 fillColor: Color.fromARGB(255, 211, 6, 6),
                 isDense: true,
                 border: OutlineInputBorder(),
-                labelText: 'Usuario',
+                labelText: 'Nome',
               ),
             ),
           ),
@@ -33,12 +34,96 @@ class Login extends StatelessWidget {
               decoration: InputDecoration(
                 isDense: true,
                 border: OutlineInputBorder(),
-                labelText: 'Senha',
+                labelText: 'CPF',
               ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+            child: const TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                isDense: true,
+                border: OutlineInputBorder(),
+                labelText: 'Email',
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+            child: const TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                isDense: true,
+                border: OutlineInputBorder(),
+                labelText: 'Telefone',
+              ),
+            ),
+          ),
+          MyStatefulWidget(),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Stack(
+              children: <Widget>[
+                Positioned.fill(
+                  child: Container(
+                    decoration: const BoxDecoration(
+                        color: Color.fromRGBO(24, 54, 105, 1)),
+                  ),
+                ),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    padding: const EdgeInsets.all(16.0),
+                    primary: Colors.white,
+                    minimumSize: Size(232, 56),
+                    textStyle: const TextStyle(fontSize: 20),
+                  ),
+                  onPressed: () {
+                  },
+                  child: const Text('Enviar'),
+                ),
+              ],
             ),
           ),
         ],
       ),
+    );    
+  }
+  
+}
+class MyStatefulWidget extends StatefulWidget {
+  const MyStatefulWidget({Key? key}) : super(key: key);
+
+  @override
+  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  bool isChecked = false;
+
+  @override
+  Widget build(BuildContext context) {
+    Color getColor(Set<MaterialState> states) {
+      const Set<MaterialState> interactiveStates = <MaterialState>{
+        MaterialState.pressed,
+        MaterialState.hovered,
+        MaterialState.focused,
+      };
+      if (states.any(interactiveStates.contains)) {
+        return Colors.blue;
+      }
+      return Color.fromRGBO(24, 54, 105, 1);
+    }
+
+    return Checkbox(
+      checkColor: Colors.white,
+      fillColor: MaterialStateProperty.resolveWith(getColor),
+      value: isChecked,
+      onChanged: (bool? value) {
+        setState(() {
+          isChecked = value!;
+        });
+      },
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:delivery_food/pages/register.dart';
 import 'package:flutter/material.dart';
 
 //import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class Login extends StatelessWidget {
                 'https://cdn.discordapp.com/attachments/956310286866972794/956722285975306260/Blue_Restaurant_Logo__1_-removebg-preview.png'),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 80),
             child: const TextField(
               decoration: InputDecoration(
                 fillColor: Color.fromARGB(255, 211, 6, 6),
@@ -27,7 +28,7 @@ class Login extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 80),
             child: const TextField(
               obscureText: true,
               decoration: InputDecoration(
@@ -47,8 +48,7 @@ class Login extends StatelessWidget {
                 Positioned.fill(
                   child: Container(
                     decoration: const BoxDecoration(
-                      color: Color.fromRGBO(24, 54, 105, 1)
-                    ),
+                        color: Color.fromRGBO(24, 54, 105, 1)),
                   ),
                 ),
                 TextButton(
@@ -61,7 +61,6 @@ class Login extends StatelessWidget {
                   onPressed: () {},
                   child: const Text('Login'),
                 ),
-                
               ],
             ),
           ),
@@ -75,8 +74,7 @@ class Login extends StatelessWidget {
                 Positioned.fill(
                   child: Container(
                     decoration: const BoxDecoration(
-                        color: Color.fromRGBO(24, 54, 105, 1)
-                    ),
+                        color: Color.fromRGBO(24, 54, 105, 1)),
                   ),
                 ),
                 TextButton(
@@ -86,10 +84,15 @@ class Login extends StatelessWidget {
                     minimumSize: Size(232, 56),
                     textStyle: const TextStyle(fontSize: 20),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Register()),
+                    );
+                  },
                   child: const Text('Cadastrar'),
                 ),
-                
               ],
             ),
           ),
