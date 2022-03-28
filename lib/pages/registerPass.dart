@@ -1,11 +1,10 @@
 import 'package:delivery_food/pages/login.dart';
-import 'package:delivery_food/pages/registerPass.dart';
 import 'package:flutter/material.dart';
 
 //import 'package:flutter/material.dart';
 
-class Register extends StatelessWidget {
-  const Register({Key? key}) : super(key: key);
+class registerPass extends StatelessWidget {
+  const registerPass({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +17,7 @@ class Register extends StatelessWidget {
           Container(
             padding: EdgeInsets.only(left: 25),
             child: Text(
-              'Seja Bem-Vindo!!',
+              'Crie sua Senha',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
@@ -29,7 +28,7 @@ class Register extends StatelessWidget {
           Container(
             padding: EdgeInsets.only(left: 25),
             child: Text(
-              'Informe seus dados pessoais.',
+              'Sua senha deve ter no mínimo 8 caracteres',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 14,
@@ -40,11 +39,11 @@ class Register extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 12, horizontal: 25),
             child: const TextField(
+              obscureText: true,
               decoration: InputDecoration(
-                fillColor: Color.fromARGB(255, 211, 6, 6),
                 isDense: true,
                 border: OutlineInputBorder(),
-                labelText: 'Nome',
+                labelText: 'Senha',
               ),
             ),
           ),
@@ -55,47 +54,9 @@ class Register extends StatelessWidget {
               decoration: InputDecoration(
                 isDense: true,
                 border: OutlineInputBorder(),
-                labelText: 'CPF',
+                labelText: 'Confirme sua senha',
               ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 25),
-            child: const TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                isDense: true,
-                border: OutlineInputBorder(),
-                labelText: 'Email',
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 25),
-            child: const TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                isDense: true,
-                border: OutlineInputBorder(),
-                labelText: 'Telefone',
-              ),
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(vertical: 1, horizontal: 10),
-            child: Row(
-              children: <Widget>[
-                MyStatefulWidget(),
-                Text(
-                  'Li e concordo',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.normal,
-                  ),
-                )
-              ],
-            ),
-            alignment: Alignment.centerLeft,
           ),
           Container(
             child: ClipRRect(
@@ -119,7 +80,7 @@ class Register extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const registerPass()),
+                            builder: (context) => const Login()),
                       );
                     },
                     child: const Text('Enviar'),
@@ -134,39 +95,3 @@ class Register extends StatelessWidget {
   }
 }
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
-
-  @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
-}
-
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  bool isChecked = false;
-
-  @override
-  Widget build(BuildContext context) {
-    Color getColor(Set<MaterialState> states) {
-      const Set<MaterialState> interactiveStates = <MaterialState>{
-        MaterialState.pressed,
-        MaterialState.hovered,
-        MaterialState.focused,
-      };
-      if (states.any(interactiveStates.contains)) {
-        return Colors.blue;
-      }
-      return Color.fromRGBO(24, 54, 105, 1);
-    }
-
-    return Checkbox(
-      checkColor: Colors.white,
-      fillColor: MaterialStateProperty.resolveWith(getColor),
-      value: isChecked,
-      onChanged: (bool? value) {
-        setState(() {
-          isChecked = value!;
-        });
-      },
-    );
-  }
-}
