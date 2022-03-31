@@ -46,10 +46,10 @@ class Register extends StatelessWidget {
                               border: OutlineInputBorder(),
                               labelText: 'Nome',
                             ),
-                            validator: (value){
-                              if(value!.isNotEmpty && value.length > 2){
+                            validator: (value) {
+                              if (value!.isNotEmpty && value.length > 2) {
                                 return null;
-                              } else if (value.length < 3 && value.isNotEmpty){
+                              } else if (value.length < 3 && value.isNotEmpty) {
                                 return 'Nome muito pequeno';
                               } else {
                                 return 'Campo nome obrigatório';
@@ -65,12 +65,13 @@ class Register extends StatelessWidget {
                               border: OutlineInputBorder(),
                               labelText: 'CPF',
                             ),
-                            validator: (value){
-                              if(value!.length == 11 && value.isNotEmpty){
+                            validator: (value) {
+                              if (value!.length == 11 && value.isNotEmpty) {
                                 return null;
-                              } else if(value.length < 11 && value.isNotEmpty){
+                              } else if (value.length < 11 &&
+                                  value.isNotEmpty) {
                                 return 'Cpf precisa ter 11 caracteres';
-                              } else{
+                              } else {
                                 return 'Campo Cpf Obrigatório';
                               }
                             },
@@ -82,13 +83,17 @@ class Register extends StatelessWidget {
                               border: OutlineInputBorder(),
                               labelText: 'Email',
                             ),
-                            validator: (value){
-                              if(value!.isNotEmpty &&  value.toString().contains('@gmail.com') ){
+                            validator: (value) {
+                              if (value!.isNotEmpty &&
+                                  value.toString().contains('@gmail.com')) {
                                 return null;
-                              }else if (value.isNotEmpty &&  value != value.toString().compareTo('@gmail.com') ){
+                              } else if (value.isNotEmpty &&
+                                  value !=
+                                      value
+                                          .toString()
+                                          .compareTo('@gmail.com')) {
                                 return 'email invalido';
-                              }
-                              else{
+                              } else {
                                 return 'Campo de email obrigatório';
                               }
                             },
@@ -100,13 +105,14 @@ class Register extends StatelessWidget {
                               border: OutlineInputBorder(),
                               labelText: 'Celular',
                             ),
-                            validator: (value){ 
-                              if(value!.isNotEmpty && value.length == 10 || value.length == 11){
+                            validator: (value) {
+                              if (value!.isNotEmpty && value.length == 10 ||
+                                  value.length == 11) {
                                 return null;
-                              }else if(value.isNotEmpty && value.length < 10){
+                              } else if (value.isNotEmpty &&
+                                  value.length < 10) {
                                 return 'Número de celular menor que o normal';
-                              }
-                              else{
+                              } else {
                                 return 'Campo de celular obrigatório';
                               }
                             },
@@ -119,12 +125,12 @@ class Register extends StatelessWidget {
                               border: OutlineInputBorder(),
                               labelText: 'Senha',
                             ),
-                            validator: (value){
-                              if(value!.isNotEmpty && value.length > 6){
+                            validator: (value) {
+                              if (value!.isNotEmpty && value.length > 6) {
                                 return null;
-                              } else if (value.isNotEmpty && value.length < 7){
+                              } else if (value.isNotEmpty && value.length < 7) {
                                 return 'Senha precisa ser maior que 6 caracteres';
-                              }else{
+                              } else {
                                 return 'Campo Senha obrigatório';
                               }
                             },
@@ -157,14 +163,13 @@ class Register extends StatelessWidget {
                                     textStyle: const TextStyle(fontSize: 20),
                                   ),
                                   onPressed: () {
-                                    if(!_formKey.currentState!.validate()){
+                                    if (!_formKey.currentState!.validate()) {
                                       return;
                                     }
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              const Login()),
+                                          builder: (context) => const Login()),
                                     );
                                   },
                                   child: const Text('Enviar'),

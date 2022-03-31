@@ -1,4 +1,5 @@
 import 'package:delivery_food/pages/register.dart';
+import 'package:delivery_food/pages/menu.dart';
 import 'package:flutter/material.dart';
 
 //import 'package:flutter/material.dart';
@@ -12,13 +13,13 @@ class Login extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 233, 255, 252),
       body: Column(
         children: [
-          Image(
+          const Image(
             image: NetworkImage(
                 'https://cdn.discordapp.com/attachments/956310286866972794/956722285975306260/Blue_Restaurant_Logo__1_-removebg-preview.png'),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(vertical: 12, horizontal: 80),
-            child: const TextField(
+            child: TextField(
               decoration: InputDecoration(
                 fillColor: Color.fromARGB(255, 211, 6, 6),
                 isDense: true,
@@ -27,9 +28,9 @@ class Login extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(vertical: 12, horizontal: 80),
-            child: const TextField(
+            child: TextField(
               obscureText: true,
               decoration: InputDecoration(
                 isDense: true,
@@ -39,7 +40,7 @@ class Login extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(10.0),
+            margin: const EdgeInsets.all(10.0),
           ),
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
@@ -55,17 +56,23 @@ class Login extends StatelessWidget {
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.all(16.0),
                     primary: Colors.white,
-                    minimumSize: Size(232, 56),
+                    minimumSize: const Size(232, 56),
                     textStyle: const TextStyle(fontSize: 20),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Menu()),
+                    );
+                  },
                   child: const Text('Login'),
                 ),
               ],
             ),
           ),
           Container(
-            margin: EdgeInsets.all(10.0),
+            margin: const EdgeInsets.all(10.0),
           ),
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
@@ -81,7 +88,7 @@ class Login extends StatelessWidget {
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.all(16.0),
                     primary: Colors.white,
-                    minimumSize: Size(232, 56),
+                    minimumSize: const Size(232, 56),
                     textStyle: const TextStyle(fontSize: 20),
                   ),
                   onPressed: () {
