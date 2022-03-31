@@ -1,4 +1,5 @@
 import 'package:delivery_food/models/Food.dart';
+import 'package:delivery_food/pages/detalhe_comida.dart';
 import 'package:delivery_food/pages/perfil.dart';
 import 'package:delivery_food/repositories/food_repository.dart';
 import 'package:flutter/material.dart';
@@ -112,8 +113,21 @@ class Menu extends StatelessWidget {
               child: ListView.separated(
                   itemBuilder: (BuildContext context, int index) {
                     return ListTile(
+                      leading: Image.asset(
+                          'assets/images/${foodList[index].id}.png'),
                       title: Text('Comida # ${foodList[index].id}'),
                       subtitle: Text('R\$ ${foodList[index].price}'),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetalheComida(),
+                            settings: RouteSettings(
+                              arguments: foodList[index],
+                            ),
+                          ),
+                        );
+                      },
                     );
                   },
                   separatorBuilder: (_, __) => const Divider(),
@@ -124,19 +138,50 @@ class Menu extends StatelessWidget {
           type: BottomNavigationBarType.fixed,
           currentIndex: 0,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Menu'),
             BottomNavigationBarItem(
-                icon: IconButton(icon: const Icon(Icons.perm_identity_sharp), onPressed: () {
+                icon: IconButton(
+                  icon: const Icon(Icons.home),
+                  onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => Perfil()),
+                      MaterialPageRoute(builder: (context) => Menu()),
                     );
-                  },), label: 'Perfil'),
+                  },
+                ),
+                label: 'Menu'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.date_range_outlined), label: 'Pedidos'),
+                icon: IconButton(
+                  icon: const Icon(Icons.perm_identity_sharp),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Perfil()),
+                    );
+                  },
+                ),
+                label: 'Perfil'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart), label: 'Carrinho'),
+                icon: IconButton(
+                  icon: const Icon(Icons.date_range_outlined),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Perfil()),
+                    );
+                  },
+                ),
+                label: 'Pedidos'),
+            BottomNavigationBarItem(
+                icon: IconButton(
+                  icon: const Icon(Icons.shopping_cart),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Perfil()),
+                    );
+                  },
+                ),
+                label: 'Carrinho'),
           ]),
     );
   }

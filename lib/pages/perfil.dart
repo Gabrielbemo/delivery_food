@@ -19,6 +19,55 @@ class Perfil extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          currentIndex: 1,
+          items: [
+            BottomNavigationBarItem(
+                icon: IconButton(
+                  icon: const Icon(Icons.home),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Menu()),
+                    );
+                  },
+                ),
+                label: 'Menu'),
+            BottomNavigationBarItem(
+                icon: IconButton(
+                  icon: const Icon(Icons.perm_identity_sharp),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Perfil()),
+                    );
+                  },
+                ),
+                label: 'Perfil'),
+            BottomNavigationBarItem(
+                icon: IconButton(
+                  icon: const Icon(Icons.date_range_outlined),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Perfil()),
+                    );
+                  },
+                ),
+                label: 'Pedidos'),
+            BottomNavigationBarItem(
+                icon: IconButton(
+                  icon: const Icon(Icons.shopping_cart),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Perfil()),
+                    );
+                  },
+                ),
+                label: 'Carrinho'),
+          ]),
     );
   }
 }

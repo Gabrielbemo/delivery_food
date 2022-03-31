@@ -21,6 +21,11 @@ class FoodRepository {
       id: 4,
       name: "X-Bacon",
       price: 14
+    ),
+    Food(
+      id: 5,
+      name: "X-Frango",
+      price: 14
     )
   ];
 }
