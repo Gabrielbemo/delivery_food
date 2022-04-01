@@ -35,7 +35,7 @@ class Pedidos extends StatelessWidget {
                     return ListTile(
                       leading:
                           Image.asset('assets/images/${pedidos[index].status}.png'),
-                      title: Text('Endereço # ${pedidos[index].endereco}'),
+                      title: Text('Endereço: ${pedidos[index].endereco}'),
                       subtitle: Text('R\$ ${pedidos[index].price}'),
                       trailing: const Icon(Icons.delete),
                       onTap: () {
