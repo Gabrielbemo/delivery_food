@@ -47,132 +47,257 @@ class Perfil extends StatelessWidget {
                         fontWeight: FontWeight.w700),
                     textAlign: TextAlign.center,
                   )))),
-          Row(
+          Stack(
             children: [
-              new Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 5, vertical: 12.0),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text('iMAGEM USUÁRIO'),
+              Align(
+                alignment: AlignmentDirectional(-0.89, -0.85),
+                child: Icon(
+                  Icons.person,
+                  color: Color(0xFF183669),
+                  size: 60,
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.18, -0.65),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 60, 10, 0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: 2,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF183669),
+                    ),
                   ),
                 ),
               ),
-              Text('nOME USUÁRIO'),
-              new Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  padding: const EdgeInsets.only(left: 0),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text('IMAGEM SETA'),
+              Align(
+                alignment: AlignmentDirectional(-0.48, -0.76),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 30, 10, 0),
+                  child: Text(
+                    'Editar perfil',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.normal, fontSize: 15),
                   ),
                 ),
               ),
-            ],
-          ),
-          Row(
-            children: [
-              new Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 5, vertical: 12.0),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text('iMAGEM USUÁRIO'),
+              Align(
+                alignment: AlignmentDirectional(-0.46, -0.83),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
+                  child: Text(
+                    'User Name',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
                   ),
                 ),
               ),
-              Text('nOME USUÁRIO'),
-              new Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  padding: const EdgeInsets.only(left: 0),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text('IMAGEM SETA'),
+              Align(
+                alignment: AlignmentDirectional(0.92, -0.84),
+                child: IconButton(
+                  icon: Icon(
+                    Icons.arrow_forward,
+                    color: Color(0xFF183669),
+                    size: 40,
+                  ),
+                  onPressed: () {
+                    print('IconButton pressed ...');
+                  },
+                ),
+              ), // Second item
+              Align(
+                alignment: AlignmentDirectional(-0.95, -0.85),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 70, 10, 0),
+                  child: Icon(
+                    Icons.pin_drop,
+                    color: Color(0xFF183669),
+                    size: 60,
                   ),
                 ),
               ),
-            ],
-          ),
-          Row(
-            children: [
-              new Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 5, vertical: 12.0),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text('iMAGEM USUÁRIO'),
+              Align(
+                alignment: AlignmentDirectional(0.18, -0.65),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 135, 10, 0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: 2,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF183669),
+                    ),
                   ),
                 ),
               ),
-              Text('nOME USUÁRIO'),
-              new Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  padding: const EdgeInsets.only(left: 0),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text('IMAGEM SETA'),
+              Align(
+                alignment: AlignmentDirectional(-0.48, -0.76),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(66, 100, 0, 0),
+                  child: Text(
+                    'Gerencie seus endereços de entrega',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.normal, fontSize: 15),
                   ),
                 ),
               ),
-            ],
-          ),
-          Row(
-            children: [
-              new Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 5, vertical: 12.0),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text('iMAGEM USUÁRIO'),
+              Align(
+                alignment: AlignmentDirectional(-0.46, -0.83),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 80, 10, 0),
+                  child: Text(
+                    'Endereços',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
                   ),
                 ),
               ),
-              Text('nOME USUÁRIO'),
-              new Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  padding: const EdgeInsets.only(left: 0),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text('IMAGEM SETA'),
+              Align(
+                alignment: AlignmentDirectional(0.96, -0.84),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 75, 10, 0),
+                  child: IconButton(
+                    icon: Icon(
+                      Icons.arrow_forward,
+                      color: Color(0xFF183669),
+                      size: 40,
+                    ),
+                    onPressed: () {
+                      print('IconButton pressed ...');
+                    },
                   ),
                 ),
               ),
-            ],
-          ),
-          
-          Row(
-            children: [
-              new Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 5, vertical: 12.0),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text('iMAGEM USUÁRIO'),
+              Align(
+                // Third item
+                alignment: AlignmentDirectional(-0.95, -0.85),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 140, 10, 0),
+                  child: Icon(
+                    Icons.star_rate_rounded,
+                    color: Color(0xFF183669),
+                    size: 60,
                   ),
                 ),
               ),
-              Text('nOME USUÁRIO'),
-              new Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  padding: const EdgeInsets.only(left: 0),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text('IMAGEM SETA'),
+              Align(
+                alignment: AlignmentDirectional(0.18, -0.65),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 205, 10, 0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: 2,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF183669),
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(-0.48, -0.76),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(42, 170, 0, 0),
+                  child: Text(
+                    'Ajude-nos avaliando o app',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.normal, fontSize: 15),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(-0.46, -0.83),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(25, 150, 0, 0),
+                  child: Text(
+                    'Avaliar aplicativo',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.96, -0.84),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 145, 10, 0),
+                  child: IconButton(
+                    icon: Icon(
+                      Icons.arrow_forward,
+                      color: Color(0xFF183669),
+                      size: 40,
+                    ),
+                    onPressed: () {
+                      print('IconButton pressed ...');
+                    },
+                  ),
+                ),
+              ),
+              Align(
+                //Fourth item
+                alignment: AlignmentDirectional(-0.95, -0.85),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(15, 220, 10, 0),
+                  child: Icon(
+                    Icons.chat,
+                    color: Color(0xFF183669),
+                    size: 50,
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.18, -0.65),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 275, 10, 0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: 2,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF183669),
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(-0.48, -0.76),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(55, 240, 0, 0),
+                  child: Text(
+                    'Seu feedback é muito importante',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.normal, fontSize: 15),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(-0.46, -0.83),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(12, 220, 0, 0),
+                  child: Text(
+                    'Fale conosco',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.96, -0.84),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 215, 10, 0),
+                  child: IconButton(
+                    icon: Icon(
+                      Icons.arrow_forward,
+                      color: Color(0xFF183669),
+                      size: 40,
+                    ),
+                    onPressed: () {
+                      print('IconButton pressed ...');
+                    },
                   ),
                 ),
               ),
