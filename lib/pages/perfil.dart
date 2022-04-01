@@ -1,4 +1,5 @@
 import 'package:delivery_food/pages/cart.dart';
+import 'package:delivery_food/pages/faleConosco.dart';
 import 'package:delivery_food/pages/pedidos.dart';
 import 'package:delivery_food/pages/perfilEdit.dart';
 import 'package:delivery_food/pages/register.dart';
@@ -95,6 +96,7 @@ class Perfil extends StatelessWidget {
                 ),
               ),
               Align(
+                //Arrow button
                 alignment: AlignmentDirectional(0.92, -0.84),
                 child: IconButton(
                   icon: Icon(
@@ -103,7 +105,10 @@ class Perfil extends StatelessWidget {
                     size: 40,
                   ),
                   onPressed: () {
-                    print('IconButton pressed ...');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PerfilEdit()),
+                    );
                   },
                 ),
               ), // Second item
@@ -156,6 +161,7 @@ class Perfil extends StatelessWidget {
                 ),
               ),
               Align(
+                //Arrow button
                 alignment: AlignmentDirectional(0.96, -0.84),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(10, 75, 10, 0),
@@ -166,7 +172,10 @@ class Perfil extends StatelessWidget {
                       size: 40,
                     ),
                     onPressed: () {
-                      print('IconButton pressed ...');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Perfil()),
+                      );
                     },
                   ),
                 ),
@@ -231,7 +240,10 @@ class Perfil extends StatelessWidget {
                       size: 40,
                     ),
                     onPressed: () {
-                      print('IconButton pressed ...');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Perfil()),
+                      );
                     },
                   ),
                 ),
@@ -296,7 +308,10 @@ class Perfil extends StatelessWidget {
                       size: 40,
                     ),
                     onPressed: () {
-                      print('IconButton pressed ...');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => faleConosco()),
+                      );
                     },
                   ),
                 ),
@@ -326,7 +341,7 @@ class Perfil extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => PerfilEdit()),
+                      MaterialPageRoute(builder: (context) => Perfil()),
                     );
                   },
                 ),

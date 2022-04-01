@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:delivery_food/pages/login.dart';
 import 'package:delivery_food/pages/perfil.dart';
 import 'package:delivery_food/pages/register.dart';
 import 'package:delivery_food/pages/menu.dart';
@@ -139,7 +140,7 @@ class PerfilEdit extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Perfil()),
+                      MaterialPageRoute(builder: (context) => Login()),
                     );
                   },
                   child: const Text('Deletar conta'),
