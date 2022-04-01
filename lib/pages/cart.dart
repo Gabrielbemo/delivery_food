@@ -68,15 +68,6 @@ class Cart extends StatelessWidget {
                       subtitle: Text('R\$ ${foods[index].price}'),
                       trailing: const Icon(Icons.delete),
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => DetalheComida(),
-                            settings: RouteSettings(
-                              arguments: foods[index],
-                            ),
-                          ),
-                        );
                       },
                     );
                   },

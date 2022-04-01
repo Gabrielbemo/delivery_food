@@ -39,15 +39,6 @@ class Pedidos extends StatelessWidget {
                       subtitle: Text('R\$ ${pedidos[index].price}'),
                       trailing: const Icon(Icons.delete),
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => DetalheComida(),
-                            settings: RouteSettings(
-                              arguments: pedidos[index],
-                            ),
-                          ),
-                        );
                       },
                     );
                   },
