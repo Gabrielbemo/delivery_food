@@ -13,7 +13,8 @@ class DetalheComida extends StatelessWidget {
     final maxLines = 5;
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 233, 255, 252),
-      appBar: AppBar(actions: []),
+      appBar:
+          AppBar(actions: [], backgroundColor: Color.fromRGBO(24, 54, 105, 1)),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -21,13 +22,11 @@ class DetalheComida extends StatelessWidget {
             Container(
                 height: 50,
                 child: Row(
-                  //crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Expanded(
                         child: Container(
                             color: Color.fromARGB(255, 142, 204, 255),
                             child: Row(
-                              //crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: <Widget>[
                                 Container(
                                   padding: const EdgeInsets.symmetric(
