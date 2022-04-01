@@ -6,31 +6,31 @@ class FoodRepository {
       id: 1,
       name: "X-Burger",
       price: 10,
-      igredients: "HAMBURGER, PAO, SAL"
+      igredients: "PAO • HAMBURGER • QUEIJO"
     ),
     Food(
       id: 2,
       name: "X-Salada",
       price: 12,
-      igredients: "HAMBURGER, PAO, SAL"
+      igredients: "PAO • HAMBURGER • QUEIJO • SALADA"
     ),
     Food(
       id: 3,
       name: "X-Calabresa",
       price: 13,
-      igredients: "HAMBURGER, PAO, SAL"
+      igredients: "PAO • HAMBURGER • QUEIJO • CALABRESA"
     ),
     Food(
       id: 4,
       name: "X-Bacon",
       price: 14,
-      igredients: "HAMBURGER, PAO, SAL"
+      igredients: "PAO • HAMBURGER • QUEIJO • BACON"
     ),
     Food(
       id: 5,
       name: "X-Frango",
       price: 14,
-      igredients: "HAMBURGER, PAO, SAL"
+      igredients: "PAO • HAMBURGER • QUEIJO • FRANGO"
     )
   ];
 }

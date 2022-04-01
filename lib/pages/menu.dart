@@ -1,5 +1,7 @@
 import 'package:delivery_food/models/Food.dart';
+import 'package:delivery_food/pages/cart.dart';
 import 'package:delivery_food/pages/detalhe_comida.dart';
+import 'package:delivery_food/pages/pedidos.dart';
 import 'package:delivery_food/pages/perfil.dart';
 import 'package:delivery_food/repositories/food_repository.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +22,7 @@ class Menu extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 233, 255, 252),
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        backgroundColor: Color.fromRGBO(24, 54, 105, 1),
         actions: <Widget>[
           Padding(
               padding: const EdgeInsets.only(right: 20.0),
@@ -47,12 +50,6 @@ class Menu extends StatelessWidget {
                   scale: 3),
             ),
           ),
-          TextButton(
-            onPressed: () {
-              debugTest();
-            },
-            child: Text('test App'),
-          ),
           Container(
               height: 50,
               child: Row(
@@ -60,7 +57,7 @@ class Menu extends StatelessWidget {
                 children: <Widget>[
                   Expanded(
                       child: Container(
-                          color: Colors.blue,
+                          color: Color.fromRGBO(24, 54, 105, 1),
                           height: 20,
                           width: 20,
                           child: Row(
@@ -115,7 +112,7 @@ class Menu extends StatelessWidget {
                     return ListTile(
                       leading: Image.asset(
                           'assets/images/${foodList[index].id}.png'),
-                      title: Text('Comida # ${foodList[index].id}'),
+                      title: Text('#${foodList[index].id} ${foodList[index].name}'),
                       subtitle: Text('R\$ ${foodList[index].price}'),
                       onTap: () {
                         Navigator.push(
@@ -166,7 +163,7 @@ class Menu extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Perfil()),
+                      MaterialPageRoute(builder: (context) => Pedidos()),
                     );
                   },
                 ),
@@ -177,7 +174,7 @@ class Menu extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Perfil()),
+                      MaterialPageRoute(builder: (context) => Cart()),
                     );
                   },
                 ),

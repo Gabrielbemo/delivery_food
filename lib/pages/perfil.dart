@@ -1,3 +1,5 @@
+import 'package:delivery_food/pages/cart.dart';
+import 'package:delivery_food/pages/pedidos.dart';
 import 'package:delivery_food/pages/perfilEdit.dart';
 import 'package:delivery_food/pages/register.dart';
 import 'package:delivery_food/pages/menu.dart';
@@ -210,7 +212,7 @@ class Perfil extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Perfil()),
+                      MaterialPageRoute(builder: (context) => Pedidos()),
                     );
                   },
                 ),
@@ -221,7 +223,7 @@ class Perfil extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Perfil()),
+                      MaterialPageRoute(builder: (context) => Cart()),
                     );
                   },
                 ),
