@@ -1,3 +1,4 @@
+import 'package:delivery_food/pages/perfilEdit.dart';
 import 'package:delivery_food/pages/register.dart';
 import 'package:delivery_food/pages/menu.dart';
 import 'package:flutter/material.dart';
@@ -198,7 +199,7 @@ class Perfil extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Perfil()),
+                      MaterialPageRoute(builder: (context) => PerfilEdit()),
                     );
                   },
                 ),
