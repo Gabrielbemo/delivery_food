@@ -55,15 +55,15 @@ class Login extends StatelessWidget {
                 TextButton(
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.all(16.0),
-                    primary: Colors.white,
+                    primary: Color.fromARGB(255, 233, 255, 252),
                     minimumSize: const Size(232, 56),
-                    textStyle: const TextStyle(fontSize: 20),
+                    textStyle: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.w900),
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => Menu()),
+                      MaterialPageRoute(builder: (context) => Menu()),
                     );
                   },
                   child: const Text('Login'),
@@ -87,15 +87,15 @@ class Login extends StatelessWidget {
                 TextButton(
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.all(16.0),
-                    primary: Colors.white,
+                    primary: Color.fromARGB(255, 233, 255, 252),
                     minimumSize: const Size(232, 56),
-                    textStyle: const TextStyle(fontSize: 20),
+                    textStyle: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.w900),
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => Register()),
+                      MaterialPageRoute(builder: (context) => Register()),
                     );
                   },
                   child: const Text('Cadastrar'),
