@@ -37,3 +37,21 @@ Em cidades pequenas, micro e pequenos empreendedores tem sofrido com altas taxas
     ~~~
 
 5) pronto 😎
+
+
+# Funcionalidades
+
+ ✔️ - TELA DESENVOLVIDA
+ 🚫 - TELA EM DESENVOLVIMENTO
+  - ✔️ LOGIN
+  - ✔️ CADASTRO
+  - ✔️ MENU
+  - ✔️ PEDIDOS
+  - ✔️ FALE CONOSCO
+  - ✔️ CARRINHO
+  - ✔️ PERFIL
+  - ✔️ EDITAR PERFIL
+  - ✔️ PEDIDOS
+  - 🚫 ENDEREÇO
+  - 🚫 LOGOUT
+  - 🚫 AVALIAR APLICATIVO
