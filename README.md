@@ -1,12 +1,39 @@
 # Delivery Food
 
 # Integrantes
-Lucas Belinelli Pereira
-Gabriel Bernardes de Moura
+Lucas Belinelli Pereira -
+Gabriel Bernardes de Moura -
 Arthur Silva Aguiar
 
 # Objetivo do app: 
 
-Devido a pandêmia e as taxas abusivas dos aplicativos, pensamos em criar um aplicativo que seria muito mais em conta para cidades do interior, cujo supriria a necessidade tanto de restaurantes pequenos quanto maiores, e também facilitaria a compra de lanches, bebidas, etc.
+Em cidades pequenas, micro e pequenos empreendedores tem sofrido com altas taxas de aplicativos de entrega. Nossa proposta engloba justamente esta parcela que vive a mercê destes grandes aplicativos
 
 # Instruções para execução do aplicativo
+
+ - Requisitos:
+    - Flutter
+    - Android studio
+    - Emulador
+
+1) Abra o terminal na pasta onde deseja deixar o projeto
+
+2) Clone o projeto 
+
+    ~~~
+    $git clone https://github.com/Gabrielbemo/delivery_food.git
+    ~~~
+
+3) entre na pasta do projeto 
+
+    ~~~
+    $cd delivery_food
+    ~~~
+
+4) execute o projeto 
+
+    ~~~
+    $flutter run lib/main.dart
+    ~~~
+
+5) pronto 😎
