@@ -1,92 +1,149 @@
+import 'dart:ui';
 import 'package:delivery_food/pages/login.dart';
 import 'package:delivery_food/pages/registerPass.dart';
+import 'package:delivery_food/pages/perfil.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 //import 'package:flutter/material.dart';
 
-class Register extends StatelessWidget {
-  Register({Key? key}) : super(key: key);
+class faleConosco extends StatelessWidget {
+  faleConosco({Key? key}) : super(key: key);
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 233, 255, 252),
+      backgroundColor: const Color.fromARGB(255, 233, 255, 252),
       body: Builder(
-          builder: (context) => Center(
-                child: Form(
-                  key: _formKey,
-                  child: Padding(
-                    padding: EdgeInsets.all(40),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Padding(padding: EdgeInsets.symmetric(vertical: 20)),
-                          Text(
-                            'Fale Conosco',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25,
-                                color: Color.fromRGBO(24, 54, 105, 1)),
-                          ),
-                          Padding(padding: EdgeInsets.symmetric(vertical: 10)),
-                          TextFormField(
-                            decoration: InputDecoration(
-                              fillColor: Color.fromARGB(255, 211, 6, 6),
-                              isDense: true,
-                              border: OutlineInputBorder(),
-                              labelText: 'Nome',
-                            ),
-                            validator: (value){
-                              if(value!.isNotEmpty && value.length > 2){
-                                return null;
-                              } else if (value.length < 3 && value.isNotEmpty){
-                                return 'Nome muito pequeno';
-                              } else {
-                                return 'Campo nome obrigatório';
-                              }
-                            },
-                          ),
-                          Padding(padding: EdgeInsets.symmetric(vertical: 20)),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
-                            child: Stack(
-                              children: <Widget>[
-                                Positioned.fill(
-                                  child: Container(
-                                    decoration: const BoxDecoration(
-                                        color: Color.fromRGBO(24, 54, 105, 1)),
-                                  ),
-                                ),
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    padding: const EdgeInsets.all(16.0),
-                                    primary: Colors.white,
-                                    minimumSize: Size(346, 56),
-                                    textStyle: const TextStyle(fontSize: 20),
-                                  ),
-                                  onPressed: () {
-                                    if(!_formKey.currentState!.validate()){
-                                      return;
-                                    }
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const Login()),
-                                    );
-                                  },
-                                  child: const Text('Enviar'),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ]),
+        builder: (context) => Center(
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+            Padding(padding: EdgeInsets.symmetric(vertical: 0)),
+            Container(
+                height: 60.0,
+                color: Colors.transparent,
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Color.fromRGBO(24, 54, 105, 1),
                   ),
+                )),
+            Container(
+              child: const Center(
+                child: Image(
+                  image: NetworkImage(
+                      'https://cdn.discordapp.com/attachments/956310286866972794/956722285975306260/Blue_Restaurant_Logo__1_-removebg-preview.png',
+                      scale: 2),
                 ),
-              )),
-              appBar: AppBar(),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+            ),
+            Container(
+                height: 60.0,
+                color: Colors.transparent,
+                child: Container(
+                    decoration: const BoxDecoration(
+                      color: Color.fromRGBO(24, 54, 105, 1),
+                    ),
+                    child: const Center(
+                        child: Text(
+                      "Fale Conosco",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 233, 255, 252),
+                          fontSize: 22,
+                          fontWeight: FontWeight.w700),
+                      textAlign: TextAlign.center,
+                    )))),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 0),
+              child: TextField(
+                  maxLines: 8,
+                  style: TextStyle(color: Color.fromRGBO(24, 54, 105, 1))),
+            ),
+            Padding(padding: EdgeInsets.symmetric(vertical: 20)),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Stack(
+                children: <Widget>[
+                  Positioned.fill(
+                    child: Container(
+                      decoration: const BoxDecoration(
+                          color: Color.fromRGBO(24, 54, 105, 1)),
+                    ),
+                  ),
+                  TextButton(
+                    style: TextButton.styleFrom(
+                      padding: const EdgeInsets.all(16.0),
+                      primary: Colors.white,
+                      minimumSize: Size(346, 56),
+                      textStyle: const TextStyle(fontSize: 20),
+                    ),
+                    onPressed: () {
+                      if (!_formKey.currentState!.validate()) {
+                        return;
+                      }
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Perfil()),
+                      );
+                    },
+                    child: const Text('Enviar'),
+                  ),
+                ],
+              ),
+            ),
+          ]),
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          currentIndex: 0,
+          items: [
+            BottomNavigationBarItem(
+                icon: IconButton(
+                  icon: const Icon(Icons.home),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => faleConosco()),
+                    );
+                  },
+                ),
+                label: 'Menu'),
+            BottomNavigationBarItem(
+                icon: IconButton(
+                  icon: const Icon(Icons.perm_identity_sharp),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Perfil()),
+                    );
+                  },
+                ),
+                label: 'Perfil'),
+            BottomNavigationBarItem(
+                icon: IconButton(
+                  icon: const Icon(Icons.date_range_outlined),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Perfil()),
+                    );
+                  },
+                ),
+                label: 'Pedidos'),
+            BottomNavigationBarItem(
+                icon: IconButton(
+                  icon: const Icon(Icons.shopping_cart),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Perfil()),
+                    );
+                  },
+                ),
+                label: 'Carrinho'),
+          ]),
     );
   }
 }
