@@ -14,7 +14,7 @@ Em cidades pequenas, micro e pequenos empreendedores tem sofrido com altas taxas
  - Requisitos:
     - Flutter
     - Android studio
-    - Emulador
+    - Emulador(Pixel 4 API 30)
 
 1) Abra o terminal na pasta onde deseja deixar o projeto
 
